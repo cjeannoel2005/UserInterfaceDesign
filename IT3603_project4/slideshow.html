@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Automotive Responsive Template</title>
 <style>
-/* ---------- Base / shared ---------- */
 * {
   box-sizing: border-box;
 }
@@ -19,7 +18,6 @@ html {
   font-family: "Lucida Sans", sans-serif;
 }
 
-/* One palette for the whole page (consistency rule) */
 :root {
   --main: #270b95;
   --main-hover: #3d22b8;
@@ -37,7 +35,6 @@ html {
   padding: 15px;
 }
 
-/* ---------- Header + slide show ---------- */
 .header {
   background-color: var(--main);
   color: var(--text);
@@ -113,12 +110,11 @@ html {
   to {opacity: 1}
 }
 
-/* ---------- Horizontal drop-down menu (under the slide show) ---------- */
 .topnav {
   background-color: var(--main);
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.35);
-  padding: 0 15px;               /* same side padding as header -> aligned */
+  padding: 0 15px;               
 }
 
 .topnav a,
@@ -139,7 +135,7 @@ html {
 }
 
 .topnav a:first-child {
-  padding-left: 0;               /* first link lines up with the header text */
+  padding-left: 0;               
 }
 
 .topnav a:hover,
@@ -220,7 +216,6 @@ html {
   }
 }
 
-/* ---------- Side menu, content, aside, footer ---------- */
 .menu ul {
   list-style-type: none;
   margin: 0;
@@ -256,14 +251,11 @@ html {
   padding: 15px;
 }
 
-/* ---------- Responsive columns ---------- */
-/* For mobile phones: */
 [class*="col-"] {
   width: 100%;
 }
 
 @media only screen and (min-width: 600px) {
-  /* For tablets: */
   .col-s-1 {width: 8.33%;}
   .col-s-2 {width: 16.66%;}
   .col-s-3 {width: 25%;}
@@ -296,9 +288,8 @@ html {
 </head>
 <body>
 
-<!-- Header with automatic automotive slide show -->
 <div class="header">
-  <h1>Chania</h1>
+  <h1>Car World</h1>
 
   <div class="slideshow-container">
     <div class="mySlides fade">
@@ -327,10 +318,9 @@ html {
   </div>
 </div>
 
-<!-- Horizontal drop-down menu directly under the slide show -->
 <div class="topnav" id="myTopnav">
   <a href="#home" class="active">Home</a>
-  <a href="#news">News</a>
+  <a href="#news">Car news</a>
   <a href="#contact">Contact</a>
   <div class="dropdown">
     <button class="dropbtn">Dropdown &#9662;</button>
@@ -344,7 +334,6 @@ html {
   <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
 </div>
 
-<!-- Main layout -->
 <div class="row">
   <div class="col-3 col-s-3 menu">
     <ul>
@@ -356,18 +345,18 @@ html {
   </div>
 
   <div class="col-6 col-s-9">
-    <h1>The City</h1>
-    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+    <h1>The Card</h1>
+    <p>The card is a representation of the car. It contains information about the car's make, model, and features.</p>
   </div>
 
   <div class="col-3 col-s-12">
     <div class="aside">
       <h2>What?</h2>
-      <p>Chania is a city on the island of Crete.</p>
+      <p>Cars are vehicles designed for transportation.</p>
       <h2>Where?</h2>
-      <p>Crete is a Greek island in the Mediterranean Sea.</p>
+      <p>Cars can be found all over the world and come in various types and models.</p>
       <h2>How?</h2>
-      <p>You can reach Chania airport from all over Europe.</p>
+      <p>Cars are used for personal and commercial transportation, providing mobility and convenience.</p>
     </div>
   </div>
 </div>
@@ -377,7 +366,6 @@ html {
 </div>
 
 <script>
-/* Automatic slide show */
 let slideIndex = 0;
 showSlides();
 
